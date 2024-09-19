@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-parcelize")
 }
 
 android {
@@ -50,6 +51,10 @@ android {
 }
 
 dependencies {
+
+    val nav_version = "2.7.4"
+
+    implementation("androidx.navigation:navigation-compose:$nav_version")
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
